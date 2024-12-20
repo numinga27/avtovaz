@@ -1,0 +1,2 @@
+Detail Name: правая деталь, Area: 1.0
+Detail Name: rigth, Area: 2.0

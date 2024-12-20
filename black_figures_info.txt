@@ -1,0 +1,6 @@
+Figure #22: Area = 521.0, Inertia = 143508929.0
+Figure #56: Area = 280.0, Inertia = 80803800.0
+Figure #122: Area = 3627.0, Inertia = 767476827.0
+Figure #154: Area = 709.0, Inertia = 159951818.0
+Figure #159: Area = 1154.0, Inertia = 51193748.0
+Figure #196: Area = 1517.0, Inertia = 34570913.0
