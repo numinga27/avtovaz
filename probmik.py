@@ -27,7 +27,21 @@ def compare_images(input_image, left_template, right_template):
 
 def main(image_path):
     left_template, right_template = load_template_images()
+    
+    if left_template is None or right_template is None:
+        print("Ошибка загрузки шаблонов. Проверьте пути к изображениям.")
+        return
+
     input_image = preprocess_image(image_path)
+
+    print("Input image size:", input_image.shape)
+    print("Left template size:", left_template.shape)
+    print("Right template size:", right_template.shape)
+
+    # Измените размер входного изображения, если он меньше шаблона
+    if input_image.shape[0] < left_template.shape[0] or input_image.shape[1] < left_template.shape[1]:
+        print("Изменение размера входного изображения для соответствия шаблону.")
+        input_image = cv2.resize(input_image, (left_template.shape[1], left_template.shape[0]))
 
     left_score, right_score = compare_images(input_image, left_template, right_template)
 
@@ -36,5 +50,6 @@ def main(image_path):
     else:
         print("Правая деталь")
 
+
 if __name__ == "__main__":
-    main('input_image.jpg')  # Укажите путь к вашему изображению
+    main('4.png')  # Укажите путь к вашему изображению
